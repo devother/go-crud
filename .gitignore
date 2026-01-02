@@ -1,5 +1,4 @@
 .env
-go.mod
 go.sum
 go-crud
 easy.db
