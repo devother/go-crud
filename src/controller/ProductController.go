@@ -22,7 +22,7 @@ func ProductPOST(c *gin.Context) {
 
 	config.DB.Create(&product)
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Product post success",
+		"message": "Product post success!",
 	})
 }
 
@@ -40,14 +40,21 @@ func ProductPUT(c *gin.Context) {
 		Price: updProduct.Price,
 	})
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Product put success",
+		"message": "Product put success!",
 	})
 
 }
 
-// func ProductDelete(c *gin.Context) {
+func ProductDelete(c *gin.Context) {
+	id := c.Param("id")
+	var product entity.Product
 
-// }
+	config.DB.Delete(&product, id)
+
+	c.JSON(http.StatusOK, gin.H{
+		"message": "Product DELETE success!",
+	})
+}
 
 // func ProductById(c *gin.Context) {
 

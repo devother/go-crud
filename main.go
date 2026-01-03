@@ -26,6 +26,7 @@ func main() {
 	router.GET("/product", controller.ProductIndex)
 	router.POST("/product", controller.ProductPOST)
 	router.PUT("/product/:id", controller.ProductPUT)
+	router.DELETE("/product/:id", controller.ProductDelete)
 
 	router.Run()
 }
