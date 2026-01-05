@@ -8,7 +8,7 @@ This project provides a starter template for building RESTful APIs in Go with bu
 - [x] Project structure  
 - [x] Database connection  
 - [x] Entity models  
-- [ ] CRUD operations  
+- [x] CRUD operations  
 - [ ] JWT implementation  
 - [ ] Authentication system  
 

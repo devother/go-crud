@@ -51,11 +51,15 @@ func ProductDelete(c *gin.Context) {
 
 	config.DB.Delete(&product, id)
 
-	c.JSON(http.StatusOK, gin.H{
-		"message": "Product DELETE success!",
-	})
+	c.Status(http.StatusOK)
 }
 
-// func ProductById(c *gin.Context) {
+func ProductById(c *gin.Context) {
+	id := c.Param("id")
+	var product entity.Product
 
-// }
+	config.DB.First(&product, id)
+	c.JSON(http.StatusOK, gin.H{
+		"product": product,
+	})
+}

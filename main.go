@@ -23,10 +23,11 @@ func main() {
 			"message": "pong",
 		})
 	})
-	router.GET("/product", controller.ProductIndex)
-	router.POST("/product", controller.ProductPOST)
-	router.PUT("/product/:id", controller.ProductPUT)
-	router.DELETE("/product/:id", controller.ProductDelete)
+	router.GET("/products", controller.ProductIndex)
+	router.GET("/products/:id", controller.ProductById)
+	router.POST("/products", controller.ProductPOST)
+	router.PUT("/products/:id", controller.ProductPUT)
+	router.DELETE("/products/:id", controller.ProductDelete)
 
 	router.Run()
 }
